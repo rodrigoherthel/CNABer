@@ -2,8 +2,11 @@
 Com o CNAB, empresas mantêm o banco de dados atualizados, já que os arquivos que são intercambiados e compensados pelo padrão de comunicação dão baixa automática nos boletos pagos pelos clientes, o que facilita muito o dia a dia, já que sem esta opção cada documento teria que ser digitado manualmente.
 O processo é simples e fácil, e os arquivos podem ser enviados ou recebidos de diversas formas, mas geralmente é realizado pelo site do banco. A empresa pode emitir seus boletos utilizando um arquivo remessa pelo site da instituição financeira escolhida ou ela pode emitir diretamente os boletos. O cliente recebe e paga. Com a compensação efetivada, a empresa certifica diariamente pelo site bancário se existem arquivos retorno, o que lhe possibilita processar diretamente no software financeiro os arquivos que foram baixados pelo site, o que gera a baixa dos boletos liquidados. Tudo é realizado em meio digital. E os arquivos não podem ser compactados ao serem encaminhados ao banco.
 
+# Para que serve o CNABer
+Simples! Para você abstrair as regras (posicionamentos, tamanhos de campos e linhas de cabeçalho e rodapé) para geração e leitura de arquivos propostos pela FEBRABAN. Você só precisa dos dados > envia para a AP > a API empacota ou desempacota para você.
+
 ## Como foi feito
-* API em código PHP com o Micro Framework LUMEM
+* API em código PHP com o Micro Framework LUMEN (https://lumen.laravel.com/)
 * Todo o código de de geração e leitura para o formato FEBRABAN foram copiados/extraídos do projeto CnabPHP disponível em https://github.com/QuilhaSoft/OpenCnabPHP sob a liçenca do tipo "MIT License"
 
 ## Como Executar
