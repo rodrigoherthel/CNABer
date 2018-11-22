@@ -224,7 +224,6 @@ $request->setUrl('http://localhost:8000/v1/remessa');
 $request->setMethod(HTTP_METH_POST);
 
 $request->setHeaders(array(
-  'postman-token' => '2322be06-839f-bc80-50dd-a0c0e1f8544e',
   'cache-control' => 'no-cache',
   'mensagem-1' => 'teste',
   'situacao-arquivo' => 'T',
@@ -439,7 +438,6 @@ $request->setUrl('http://localhost:8000/v1/retorno');
 $request->setMethod(HTTP_METH_POST);
 
 $request->setHeaders(array(
-  'postman-token' => 'e33dabea-44ef-4696-be94-7a122b1341ec',
   'cache-control' => 'no-cache',
   'content-type' => 'multipart/form-data; boundary=----WebKitFormBoundary7MA4YWxkTrZu0gW'
 ));
