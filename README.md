@@ -8,13 +8,10 @@ O processo é simples e fácil, e os arquivos podem ser enviados ou recebidos de
 
 ## Como Executar
 * Entre na pasta "api" e execute o comando: php -S localhost:8000 -t public
-* Para remessa vocês deverá fazer requisições POST para:
-* REMESSA - http://localhost:8000/v1/remessa
-* RETORNO - http://localhost:8000/v1/retorno
 
 # Gerando arquivos de Remessa (.REM)
 O arquivo de remesssa equivale ao arquivo no formato CNAB/FEBRABAN contendo dados do pagamentos desejados. Este arquivo deverá ser enviado para o banco.
-* Você deverá efetuar uma requisição POST na rota /v1/remessa.
+* Você deverá efetuar uma requisição POST na rota http://localhost:8000/v1/remessa/v1/remessa.
 * No header renvie os dados do banco e especificações do arquivo que deverão compor o cabeçalho.
 * No corpo, no formato JSON, envie um JSON contendo cada cobrança/boleto a ser gerado.
 
@@ -380,7 +377,7 @@ try {
 
 # Lendo arquivo de retorno (.RET)
 O arquivo de retorno equivale ao arquivo no formato CNAB/FEBRABAN contendo os pagamentos efetuados. Este arquivo é enviado pelo banco.
-* Você deverá efetuar uma requisição POST na rota /v1/retorno.
+* Você deverá efetuar uma requisição POST na rota http://localhost:8000/v1/retorno.
 * No corpo da requisição faça o upload do arquivo recebido (extensão .RET).
 * Você receberá como resposta um JSON todos os pagamentos efetuados.
 
