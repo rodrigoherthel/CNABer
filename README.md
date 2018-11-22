@@ -1,24 +1,24 @@
-#O que é CNAB
+# O que é CNAB
 Com o CNAB, empresas mantêm o banco de dados atualizados, já que os arquivos que são intercambiados e compensados pelo padrão de comunicação dão baixa automática nos boletos pagos pelos clientes, o que facilita muito o dia a dia, já que sem esta opção cada documento teria que ser digitado manualmente.
 O processo é simples e fácil, e os arquivos podem ser enviados ou recebidos de diversas formas, mas geralmente é realizado pelo site do banco. A empresa pode emitir seus boletos utilizando um arquivo remessa pelo site da instituição financeira escolhida ou ela pode emitir diretamente os boletos. O cliente recebe e paga. Com a compensação efetivada, a empresa certifica diariamente pelo site bancário se existem arquivos retorno, o que lhe possibilita processar diretamente no software financeiro os arquivos que foram baixados pelo site, o que gera a baixa dos boletos liquidados. Tudo é realizado em meio digital. E os arquivos não podem ser compactados ao serem encaminhados ao banco.
 
-##Como foi feito
+## Como foi feito
 * API em código PHP com o Micro Framework LUMEM
 * Todo o código de de geração e leitura para o formato FEBRABAN foram copiados/extraídos do projeto CnabPHP disponível em https://github.com/QuilhaSoft/OpenCnabPHP sob a liçenca do tipo "MIT License"
 
-##Como Executar
+## Como Executar
 * Entre na pasta "api" e execute o comando: php -S localhost:8000 -t public
 * Para remessa vocês deverá fazer requisições POST para:
 * REMESSA - http://localhost:8000/v1/remessa
 * RETORNO - http://localhost:8000/v1/retorno
 
-#Gerando arquivos de Remessa (.REM)
+# Gerando arquivos de Remessa (.REM)
 O arquivo de remesssa equivale ao arquivo no formato CNAB/FEBRABAN contendo dados do pagamentos desejados. Este arquivo deverá ser enviado para o banco.
 * Você deverá efetuar uma requisição POST na rota /v1/remessa.
 * No header renvie os dados do banco e especificações do arquivo que deverão compor o cabeçalho.
 * No corpo, no formato JSON, envie um JSON contendo cada cobrança/boleto a ser gerado.
 
-##Campos Header
+## Campos Header
 * codigo-banco - 341 (itau)
 * tipo-cnab - cnab240 ou cnab400
 * nome-empresa - <Nome da empresa>
@@ -35,7 +35,7 @@ O arquivo de remesssa equivale ao arquivo no formato CNAB/FEBRABAN contendo dado
 * situacao-arquivo - use T para teste e P para producao
 * mensagem-1 - Mensagem personalizada para todos os boletos (suportado somente para SICOOB cnab400, mudar o numero 1 para 2,3,4,5 para incluir mais mensagens)
 
-##Campos Json
+## Campos Json
 * codigo_movimento - 1 = Entrada de título, para outras opções ver nota explicativa C004 manual Cnab_SIGCB na pasta docs
 * nosso_numero - numero sequencial de boleto
 * seu_numero - se nao informado usarei o nosso numero 
@@ -66,7 +66,7 @@ O arquivo de remesssa equivale ao arquivo no formato CNAB/FEBRABAN contendo dado
 * data_multa - Formato YYYY-MM-DD
 * vlr_multa - valor da multa
 
-##Exemplo Request HTTP
+## Exemplo Request HTTP
 ```HTTP
 POST /v1/remessa HTTP/1.1
 Host: localhost:8000
@@ -215,7 +215,7 @@ Cache-Control: no-cache
   }
 ]
 ```
-##Exemplo Request PHP 
+## Exemplo Request PHP 
 ```php
 <?php
 
@@ -379,7 +379,7 @@ try {
 }
 ```
 
-#Lendo arquivo de retorno (.RET)
+# Lendo arquivo de retorno (.RET)
 O arquivo de retorno equivale ao arquivo no formato CNAB/FEBRABAN contendo os pagamentos efetuados. Este arquivo é enviado pelo banco.
 * Você deverá efetuar uma requisição POST na rota /v1/retorno.
 * No corpo da requisição faça o upload do arquivo recebido (extensão .RET).
@@ -418,7 +418,7 @@ O arquivo de retorno equivale ao arquivo no formato CNAB/FEBRABAN contendo os pa
 ]
 ```
 
-##Exemplo Request HTTP
+## Exemplo Request HTTP
 ```HTTP
 POST /v1/retorno HTTP/1.1
 Host: localhost:8000
@@ -430,7 +430,7 @@ Content-Type:
 ------WebKitFormBoundary7MA4YWxkTrZu0gW--
 ```
 
-##Exemplo Request PHP 
+## Exemplo Request PHP 
 ```php
 <?php
 
@@ -458,8 +458,9 @@ try {
 }
 ```
 MIT License
- Copyright (c) 2018 Rodrigo Herthel
- Permission is hereby granted, free of charge, to any person obtaining a copy
+Copyright (c) 2018 Rodrigo Herthel
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
 in the Software without restriction, including without limitation the rights
 to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
