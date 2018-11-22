@@ -195,39 +195,6 @@ O arquivo de retorno equivale ao arquivo no formato CNAB/FEBRABAN contendo os pa
 * No corpo da requisição faça o upload do arquivo recebido (extensão .RET).
 * Você receberá como resposta um JSON todos os pagamentos efetuados.
 
-##Exemplo Retorno JSON
-```json
-[
-  {
-    "id": 0,
-    "nossoNumero": 231327,
-    "valorRecebido": 209.97,
-    "dataPagamento": "2013-06-20",
-    "carteira": 109,
-    "vlr_juros_multa": 389.75,
-    "vlr_desconto": 176.45
-  },
-  {
-    "id": 1,
-    "nossoNumero": 211842,
-    "valorRecebido": 392.09,
-    "dataPagamento": "2013-06-20",
-    "carteira": 109,
-    "vlr_juros_multa": 395.41,
-    "vlr_desconto": 0
-  },
-  {
-    "id": 2,
-    "nossoNumero": 237636,
-    "valorRecebido": 340.67,
-    "dataPagamento": "2013-06-20",
-    "carteira": 109,
-    "vlr_juros_multa": 545.6,
-    "vlr_desconto": 201.6
-  }
-]
-```
-
 ## Exemplo Request HTTP
 ```HTTP
 POST /v1/retorno HTTP/1.1
@@ -266,7 +233,42 @@ try {
   echo $ex;
 }
 ```
-MIT License
+
+## Exemplo Retorno JSON
+```json
+[
+  {
+    "id": 0,
+    "nossoNumero": 231327,
+    "valorRecebido": 209.97,
+    "dataPagamento": "2013-06-20",
+    "carteira": 109,
+    "vlr_juros_multa": 389.75,
+    "vlr_desconto": 176.45
+  },
+  {
+    "id": 1,
+    "nossoNumero": 211842,
+    "valorRecebido": 392.09,
+    "dataPagamento": "2013-06-20",
+    "carteira": 109,
+    "vlr_juros_multa": 395.41,
+    "vlr_desconto": 0
+  },
+  {
+    "id": 2,
+    "nossoNumero": 237636,
+    "valorRecebido": 340.67,
+    "dataPagamento": "2013-06-20",
+    "carteira": 109,
+    "vlr_juros_multa": 545.6,
+    "vlr_desconto": 201.6
+  }
+]
+```
+
+
+# MIT License
 Copyright (c) 2018 Rodrigo Herthel
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
