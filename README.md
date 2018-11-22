@@ -6,8 +6,9 @@ O processo é simples e fácil, e os arquivos podem ser enviados ou recebidos de
 Simples! Para você abstrair as regras (posicionamentos, tamanhos de campos e linhas de cabeçalho e rodapé) para geração e leitura de arquivos propostos pela FEBRABAN. Você só precisa dos dados > envia para a AP > a API empacota ou desempacota para você.
 
 ## Como foi feito
-* API em código PHP com o Micro Framework LUMEN (https://lumen.laravel.com/)
-* Todo o código de de geração e leitura para o formato FEBRABAN foram copiados/extraídos do projeto CnabPHP disponível em https://github.com/QuilhaSoft/OpenCnabPHP sob a liçenca do tipo "MIT License"
+* PHP 
+* Micro-Framework LUMEN (https://lumen.laravel.com/)
+* Todo o código de geração/leitura para o formato FEBRABAN foram copiados/extraídos do projeto CnabPHP disponível em https://github.com/QuilhaSoft/OpenCnabPHP sob a liçenca MIT License.
 
 ## Como Executar
 * Entre na pasta "api" e execute o comando: php -S localhost:8000 -t public
