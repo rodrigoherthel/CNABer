@@ -3,7 +3,7 @@ Com o CNAB, empresas mantêm o banco de dados atualizados, já que os arquivos q
 O processo é simples e fácil, e os arquivos podem ser enviados ou recebidos de diversas formas, mas geralmente é realizado pelo site do banco. A empresa pode emitir seus boletos utilizando um arquivo remessa pelo site da instituição financeira escolhida ou ela pode emitir diretamente os boletos. O cliente recebe e paga. Com a compensação efetivada, a empresa certifica diariamente pelo site bancário se existem arquivos retorno, o que lhe possibilita processar diretamente no software financeiro os arquivos que foram baixados pelo site, o que gera a baixa dos boletos liquidados. Tudo é realizado em meio digital. E os arquivos não podem ser compactados ao serem encaminhados ao banco.
 
 # Para que serve o CNABer
-Simples! Para você abstrair as regras (posicionamentos, tamanhos de campos e linhas de cabeçalho e rodapé) para geração e leitura de arquivos propostos pela FEBRABAN. Você só precisa dos dados > envia para a AP > a API empacota ou desempacota para você.
+Simples! Para você abstrair as regras (posicionamentos, tamanhos de campos e linhas de cabeçalho e rodapé) para geração e leitura de arquivos propostos pela FEBRABAN. Você só precisa dos dados > envia para a API > a API empacota ou desempacota para você.
 
 ## Como foi feito
 * PHP 
